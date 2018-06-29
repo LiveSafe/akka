@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''files = sh (script: \'ls -l\',returnStdout: true).trim()
-echo "${files}"
+        sh '''ls
 ./gradlew -clean testDevelopDebugUnitTest'''
       }
     }
